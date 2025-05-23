@@ -1,5 +1,25 @@
 Soit le résultat suivant d'un test de couverture de code.
 
+
 Comment interpréter ce résultat ?
 On peut y voir que les éléments div, add et Calculatrice ont été réussi à 100%,
-contrairement à l'élement multi qui couvre %, 4 des instructions sur 24 a été manqué
+contrairement à l'élement multi qui couvre 0%, 4 des instructions sur 24 ont été manqué,
+ainsi cela donne une couverture de 83%.
+0 branches sur les 2 ont été manquées, ce qui donne une couverture de 100%.
+Cela signifie que toutes les branches ont pu être testées.
+
+Ce qui pose problème, c'est l'instruction mult(float, float), qui a une couverture de 0%.
+C'est à dire qu'aucune instruction de cette méthode n'est couverte par les tests.
+
+
+Que faut-il faire pour améliorer ce résultat ?
+Ce qui faut améliorer en priorité c'est la méthode mult(float, float).
+Il faudrait lui écrire des tests unitaires avec plusieurs cas qui teste les
+différentes possibilités de la méthode. Comme deux nombres positifs, un positif et un 0,
+un positif et un négatif...
+
+On a aussi la possibilité d'utiliser des outils pour visualiser les lignes non couvertes
+(par exemple sur Intelliji2 on peut utiliser JaCoCo).
+
+Après continuer à vérifier la couverture des exceptions et des conditions et adapter
+les tests en fonction.
