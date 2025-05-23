@@ -1,0 +1,5 @@
+Soit le résultat suivant d'un test de couverture de code.
+
+Comment interpréter ce résultat ?
+On peut y voir que les éléments div, add et Calculatrice ont été réussi à 100%,
+contrairement à l'élement multi qui couvre %, 4 des instructions sur 24 a été manqué
